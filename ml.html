@@ -1,0 +1,5 @@
+library(RCurl)
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", destfile="pml-training.csv", method="curl")
+training <- read.csv("pml-training.csv", na.strings=c("NA","#DIV/0!", ""))
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", destfile="pml-testing.csv", method="curl")
+testing <- read.csv("pml-testing.csv", na.strings=c("NA","#DIV/0!", ""))
